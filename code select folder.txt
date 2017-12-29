@@ -1,0 +1,10 @@
+Dim Namafile
+
+Namafile = Dir(folder)
+Do While Namafile > ""
+Adodc1.Recordset.AddNew
+Adodc1.Recordset.Fields!Nama = Namafile
+Adodc1.Recordset.Fields!URL = folder & "\" & Namafile
+Adodc1.Recordset.Update
+Namafile = Dir()
+Loop
